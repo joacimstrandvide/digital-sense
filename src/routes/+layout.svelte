@@ -2,8 +2,9 @@
     import '../app.css'
     import favicon from '$lib/assets/phone.png'
     import { page } from '$app/stores'
+    import { base } from '$app/paths'
 
-    const isActive = (path) => $page.url.pathname === path
+    const isActive = (path) => $page.url.pathname === `${base}${path}`
 </script>
 
 <svelte:head>
