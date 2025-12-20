@@ -21,14 +21,16 @@
 
     <nav class="nav">
         <ul class="nav-links">
+            <li><a href="{base}/" class:active={isActive('/')}>Home</a></li>
             <li>
-                <a href="/" class:active={isActive('/')}>Home</a>
+                <a href="{base}/guides" class:active={isActive('/guides')}
+                    >Guides</a
+                >
             </li>
             <li>
-                <a href="/guides" class:active={isActive('/guides')}>Guides</a>
-            </li>
-            <li>
-                <a href="/tools" class:active={isActive('/tools')}>Tools</a>
+                <a href="{base}/tools" class:active={isActive('/tools')}
+                    >Tools</a
+                >
             </li>
         </ul>
     </nav>
