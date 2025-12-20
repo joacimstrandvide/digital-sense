@@ -1,6 +1,6 @@
 import adapter from '@sveltejs/adapter-static'
 
-const repoName = 'YOUR_REPO_NAME' // change this
+const repoName = 'digital-sense'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -11,8 +11,7 @@ const config = {
             fallback: '404.html'
         }),
         paths: {
-            base: process.env.NODE_ENV === 'production' ? `/${repoName}` : '',
-            assets: process.env.NODE_ENV === 'production' ? `/${repoName}` : ''
+            base: process.env.NODE_ENV === 'production' ? `/${repoName}` : ''
         }
     }
 }
