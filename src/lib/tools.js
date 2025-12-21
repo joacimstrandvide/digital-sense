@@ -5,13 +5,13 @@ export const toolSections = [
             {
                 name: 'KeePassXC',
                 description:
-                    'A free, open-source password manager that stores your passwords securely in an encrypted vault offline.',
+                    'A free password manager that securely stores all your passwords in local file one place, fully under your control.',
                 url: 'https://keepassxc.org'
             },
             {
                 name: 'Aegis Authenticator',
                 description:
-                    'A secure and open-source two-factor authentication app for Android.',
+                    'A free and open source 2 Factor Authentication app for improved security on your online accounts.',
                 url: 'https://getaegis.app'
             }
         ]
@@ -21,12 +21,14 @@ export const toolSections = [
         tools: [
             {
                 name: 'LibreOffice',
-                description: 'A open source alternative to office.',
+                description:
+                    'A free and open source office suite for documents, spreadsheets, and presentations, similar to Microsoft Office.',
                 url: 'https://libreoffice.org'
             },
             {
                 name: 'Obsidian',
-                description: 'A great note taking app',
+                description:
+                    'A simple and powerful note-taking app for organizing thoughts, ideas and notes on your local device.',
                 url: 'https://obsidian.md/'
             }
         ]
@@ -36,20 +38,21 @@ export const toolSections = [
         tools: [
             {
                 name: 'Thunderbird',
-                description: 'A free and open-source email client.',
+                description:
+                    'A free and open source desktop email app that lets you manage all your email accounts in one place.',
                 url: 'https://thunderbird.net'
             },
             {
                 name: 'SimpleLogin',
                 description:
-                    'SimpleLogin is a free service that provides email aliases.',
+                    'A service that lets you create email aliases to protect your real email address from spam.',
                 url: 'https://simplelogin.io/'
             },
             {
                 name: 'Proton Mail',
                 description:
-                    'Proton Mail is a great email provider focused on privacy, security and encryption',
-                url: 'https://simplelogin.io/'
+                    'A privacy-focused email provider that keeps your messages secure and protected.',
+                url: 'https://proton.me/mail'
             }
         ]
     },
@@ -59,48 +62,66 @@ export const toolSections = [
             {
                 name: 'LibreWolf',
                 description:
-                    'A privacy-focused browser based on Firefox with tracking and telemetry removed.',
+                    'A version of Firefox designed to minimize tracking and protect your privacy while browsing the web.',
                 url: 'https://librewolf.net'
             },
             {
                 name: 'Brave',
                 description:
-                    'A chromium based browser with built-in ad and tracker blocking and optional privacy features.',
+                    'A fast chromium based browser that blocks ads and trackers by default, making the web cleaner and safer.',
                 url: 'https://brave.com'
             },
             {
                 name: 'Ladybird',
                 description:
-                    'An independent browser engine project focused on security and standards.',
+                    'An experimental web browser project built with a strong focus on security and independence.',
                 url: 'https://ladybird.dev'
             },
             {
                 name: 'Tor Browser',
                 description:
-                    'A browser designed to protect your anonymity by routing traffic through the Tor network.',
+                    'A browser that helps you browse anonymously by hiding your location and activity.',
                 url: 'https://www.torproject.org'
             },
             {
                 name: 'uBlock Origin',
                 description:
-                    'A powerful content blocker that helps protect against malicious ads and trackers.',
+                    'A lightweight extension that blocks ads, trackers, and harmful content on websites.',
                 url: 'https://ublockorigin.com'
             }
         ]
     },
+    {
+        title: 'Search Engines',
+        tools: [
+            {
+                name: 'DuckDuckGo',
+                description:
+                    'A privacy-focused search engine that does not track your searches or build a personal profile.',
+                url: 'https://duckduckgo.com'
+            },
+            {
+                name: 'Brave Search',
+                description:
+                    'The default search engine of Brave Browser.',
+                url: 'https://search.brave.com'
+            }
+        ]
+    },
+
     {
         title: 'VPN',
         tools: [
             {
                 name: 'Proton VPN',
                 description:
-                    'Proton VPN is a great and secure VPN with a focus in privacy',
+                    'A secure VPN service that helps protect your privacy on public and private networks.',
                 url: 'https://protonvpn.com/'
             },
             {
                 name: 'Mullvad',
                 description:
-                    'Mullvad is a fast and inexpensive VPN with a serious focus on transparency and security',
+                    'A strong privacy-focused VPN that requires no personal information to sign up.',
                 url: 'https://mullvad.net/'
             }
         ]
@@ -111,25 +132,25 @@ export const toolSections = [
             {
                 name: 'Linux Mint',
                 description:
-                    'A beginner-friendly Linux distribution focused on stability and usability with many similarities to windows.',
+                    'A user-friendly operating system that feels familiar to Windows users and is easy to learn.',
                 url: 'https://linuxmint.com'
             },
             {
                 name: 'Omarchy',
                 description:
-                    'A minimal and privacy-oriented Linux setup focused on user control.',
+                    'A minimal Linux setup for users who want full control and fewer distractions with a focus on only using your keyboard.',
                 url: 'https://omarchy.org'
             },
             {
                 name: 'Tails',
                 description:
-                    'Tails is a live operating system based on Debian that by default routes all communication through TOR',
+                    'A portable operating system designed for privacy that leaves no trace on the computer you use, capable of booting off only a flash drive.',
                 url: 'https://tails.net/'
             },
             {
                 name: 'Fedora',
                 description:
-                    'Fedora is a great OS for people new to Linux',
+                    'A modern and reliable operating system that offers a clean and up-to-date experience.',
                 url: 'https://fedoraproject.org/'
             }
         ]
@@ -140,17 +161,18 @@ export const toolSections = [
             {
                 name: 'LocalSend',
                 description:
-                    'A easy to use file sharing app that works on all platforms',
+                    'An easy way to share files between devices on the same network.',
                 url: 'https://localsend.org'
             }
         ]
     },
     {
-        title: 'Third party apps',
+        title: 'Third-Party Apps',
         tools: [
             {
-                name: 'F-droid',
-                description: 'A platform for sharing apps on Android',
+                name: 'F-Droid',
+                description:
+                    'An app store for Android that focuses on free, open-source, and privacy-friendly apps.',
                 url: 'https://f-droid.org/'
             }
         ]
