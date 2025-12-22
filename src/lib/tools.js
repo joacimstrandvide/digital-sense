@@ -115,13 +115,13 @@ export const toolSections = [
             {
                 name: 'Proton VPN',
                 description:
-                    'A secure VPN service that helps protect your privacy on public and private networks.',
+                    'A good VPN with a focus on privacy.',
                 url: 'https://protonvpn.com/'
             },
             {
                 name: 'Mullvad',
                 description:
-                    'A strong privacy-focused VPN that requires no personal information to sign up.',
+                    'A great VPN with a strong focus on privacy.',
                 url: 'https://mullvad.net/'
             }
         ]

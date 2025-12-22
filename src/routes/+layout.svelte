@@ -15,7 +15,7 @@
     <div class="header-content">
         <h1>Digital Sensibility</h1>
         <p>
-            A curated library of guides and tools to improve digital security.
+            A curated library of tools to improve digital security.
         </p>
     </div>
 
@@ -23,8 +23,8 @@
         <ul class="nav-links">
             <li><a href="{base}/" class:active={isActive('/')}>Home</a></li>
             <li>
-                <a href="{base}/guides" class:active={isActive('/guides')}
-                    >Guides</a
+                <a href="{base}/about" class:active={isActive('/about')}
+                    >About</a
                 >
             </li>
             <li>

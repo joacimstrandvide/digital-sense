@@ -1,5 +1,5 @@
 <h2>Welcome</h2>
-<h4>This website helps you with guides and tools to improve your digital security</h4>
+<h4>This website helps you find tools to improve your digital security</h4>
 
 <style>
     h2,
