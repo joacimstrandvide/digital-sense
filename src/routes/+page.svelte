@@ -1,10 +1,12 @@
 <h2>Welcome</h2>
-<h4>This website helps you find tools to improve your digital security</h4>
+<h4>
+    This website helps people find free, open source and more privacy focused
+    tools to use in their everyday lives
+</h4>
 
 <style>
-    h2,
-    h4 {
+    h4, h2 {
         text-align: center;
-        font-family: 'Source Serif 4', serif;
+        font-family: 'Inter', sans-serif;
     }
 </style>

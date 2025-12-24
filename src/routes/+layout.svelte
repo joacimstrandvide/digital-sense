@@ -23,11 +23,6 @@
         <ul class="nav-links">
             <li><a href="{base}/" class:active={isActive('/')}>Home</a></li>
             <li>
-                <a href="{base}/about" class:active={isActive('/about')}
-                    >About</a
-                >
-            </li>
-            <li>
                 <a href="{base}/tools" class:active={isActive('/tools')}
                     >Tools</a
                 >
