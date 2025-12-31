@@ -27,6 +27,7 @@
         border: 1px solid #e5e7eb;
         border-radius: 0.75rem;
         background: white;
+        font-family: 'Inter', sans-serif;
     }
 
     h3 {
