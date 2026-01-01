@@ -1,3 +1,4 @@
+/* Alla verktyg */
 export const toolSections = [
     {
         title: 'Password & Account Security',
@@ -13,6 +14,12 @@ export const toolSections = [
                 description:
                     'A free and open-source two-factor authentication app that safely stores your OTP tokens offline on your device.',
                 url: 'https://getaegis.app'
+            },
+            {
+                name: 'YubiKey',
+                description:
+                    'A physical security key that works as two-factor authentication',
+                url: 'https://www.yubico.com/products/'
             }
         ]
     },
@@ -198,6 +205,12 @@ export const toolSections = [
                     'A free and open-source audio editor and recording program that supports multitrack editing and a wide range of audio tools.',
                 url: 'https://www.audacityteam.org/'
             },
+            {
+                name: 'VLC Media Player',
+                description:
+                    'VLC is a great open source media player that can play almost any format',
+                url: 'https://www.videolan.org/'
+            },
         ]
     },
     {
@@ -208,6 +221,12 @@ export const toolSections = [
                 description:
                     'An alternative Android app store focused on free, open-source, and privacy-respecting applications.',
                 url: 'https://f-droid.org/'
+            },
+            {
+                name: 'Aurora Store',
+                description:
+                    'A open source Play Store frontend.',
+                url: 'https://auroraoss.com/'
             }
         ]
     }

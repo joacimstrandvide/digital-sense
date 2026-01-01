@@ -39,9 +39,11 @@
         margin-top: auto;
         font-weight: 500;
         text-decoration: none;
+        color: #1a73e8;
+        transition: .4s;
     }
 
     .link:hover {
-        text-decoration: underline;
+        color: #0c47a1;
     }
 </style>

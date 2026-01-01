@@ -2,9 +2,11 @@
     import ToolCard from '$lib/components/ToolCard.svelte'
     import { toolSections } from '$lib/tools.js'
 
+    /* Börja med första kategorin */
     let selected = 0
 </script>
 
+<!-- Navigationen med alla kategorier -->
 <nav class="tabs">
     {#each toolSections as section, i}
         <button class:selected={i === selected} on:click={() => (selected = i)}>
@@ -14,6 +16,7 @@
 </nav>
 
 <section>
+    <!-- Varje indivuduel kategori -->
     <h2>{toolSections[selected].title}</h2>
 
     <div class="grid">
