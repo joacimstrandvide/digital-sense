@@ -14,19 +14,11 @@
 <header class="site-header">
     <div class="header-content">
         <h1>Digital Sensibility</h1>
-        <p>
-            A curated library of tools to improve digital security.
-        </p>
     </div>
 
     <nav class="nav">
         <ul class="nav-links">
             <li><a href="{base}/" class:active={isActive('/')}>Home</a></li>
-            <li>
-                <a href="{base}/tools" class:active={isActive('/tools')}
-                    >Tools</a
-                >
-            </li>
         </ul>
     </nav>
 </header>
@@ -44,14 +36,6 @@
 
     .header-content h1 {
         margin: 0;
-    }
-
-    .header-content p {
-        margin-top: 0.5rem;
-        max-width: 700px;
-        margin-left: auto;
-        margin-right: auto;
-        color: #555;
     }
 
     .nav {
