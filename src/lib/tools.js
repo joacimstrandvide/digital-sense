@@ -14,12 +14,6 @@ export const toolSections = [
                 description:
                     'A free and open-source two-factor authentication app that safely stores your OTP tokens offline on your device.',
                 url: 'https://getaegis.app'
-            },
-            {
-                name: 'YubiKey',
-                description:
-                    'A physical security key that works as two-factor authentication',
-                url: 'https://www.yubico.com/products/'
             }
         ]
     },
@@ -200,17 +194,11 @@ export const toolSections = [
                 url: 'https://www.photopea.com/'
             },
             {
-                name: 'Audacity',
-                description:
-                    'A free and open-source audio editor and recording program that supports multitrack editing and a wide range of audio tools.',
-                url: 'https://www.audacityteam.org/'
-            },
-            {
                 name: 'VLC Media Player',
                 description:
                     'VLC is a great open source media player that can play almost any format',
                 url: 'https://www.videolan.org/'
-            },
+            }
         ]
     },
     {
@@ -224,8 +212,7 @@ export const toolSections = [
             },
             {
                 name: 'Aurora Store',
-                description:
-                    'A open source Play Store frontend.',
+                description: 'A open source Play Store frontend.',
                 url: 'https://auroraoss.com/'
             }
         ]
