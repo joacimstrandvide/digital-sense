@@ -145,35 +145,6 @@ export const toolSections = [
         ]
     },
     {
-        title: 'Operating Systems',
-        tools: [
-            {
-                name: 'Linux Mint',
-                description:
-                    'A user-friendly Linux distribution that feels familiar to Windows users and offers an easy learning curve.',
-                url: 'https://linuxmint.com'
-            },
-            {
-                name: 'Omarchy',
-                description:
-                    'A minimal Linux environment for users who want full control, fewer distractions, and a keyboard-driven workflow.',
-                url: 'https://omarchy.org'
-            },
-            {
-                name: 'Tails',
-                description:
-                    'A portable, privacy-focused operating system that runs from a USB drive and leaves no trace on the computer you use.',
-                url: 'https://tails.net/'
-            },
-            {
-                name: 'Fedora',
-                description:
-                    'A modern and reliable Linux distribution that provides an up-to-date, polished, and stable desktop experience.',
-                url: 'https://fedoraproject.org/'
-            }
-        ]
-    },
-    {
         title: 'File Sharing',
         tools: [
             {
