@@ -14,6 +14,7 @@
 <header class="site-header">
     <div class="header-content">
         <h1>Digital Sensibility</h1>
+        <p>Find open source and privacy friendly tools</p>
     </div>
 </header>
 

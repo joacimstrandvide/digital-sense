@@ -2,80 +2,164 @@
     import ToolCard from '$lib/components/ToolCard.svelte'
     import { toolSections } from '$lib/tools.js'
 
-    /* Börja med första kategorin */
     let selected = 0
+    let query = ''
+
+    $: totalTools = toolSections.reduce((sum, s) => sum + s.tools.length, 0)
+
+    $: filteredTools = query.trim()
+        ? toolSections[selected].tools.filter(
+              (t) =>
+                  t.name.toLowerCase().includes(query.toLowerCase()) ||
+                  t.description.toLowerCase().includes(query.toLowerCase())
+          )
+        : toolSections[selected].tools
 </script>
 
-<header>
-    <h2>Welcome</h2>
-    <h4>
-        This website helps people find free, open source and more privacy
-        focused tools to use in their everyday lives
-    </h4>
+<header class="hero">
+    <!-- Kategorier -->
+    <div class="stats">
+        <span><strong>{totalTools}</strong> tools</span>
+        <span><strong>{toolSections.length}</strong> categories</span>
+    </div>
 </header>
 
-<nav class="tabs">
+<nav class="tabs" aria-label="Tool categories">
     {#each toolSections as section, i}
-        <button class:selected={i === selected} on:click={() => (selected = i)}>
+        <button
+            class:active={i === selected}
+            on:click={() => {
+                selected = i
+                query = ''
+            }}
+            aria-current={i === selected ? 'page' : undefined}
+        >
             {section.title}
         </button>
     {/each}
 </nav>
 
-<section>
-    <!-- Varje indivuduel kategori -->
-    <h2>{toolSections[selected].title}</h2>
-
-    <div class="grid">
-        {#each toolSections[selected].tools as tool}
-            <ToolCard {...tool} />
-        {/each}
+<main class="section">
+    <div class="section-header">
+        <h2>{toolSections[selected].title}</h2>
+        <span class="count"
+            >{filteredTools.length} tool{filteredTools.length !== 1
+                ? 's'
+                : ''}</span
+        >
     </div>
-</section>
+
+    {#if filteredTools.length > 0}
+        <div class="grid">
+            {#each filteredTools as tool (tool.name)}
+                <ToolCard {...tool} />
+            {/each}
+        </div>
+    {:else}
+        <p class="empty">No match for "<em>{query}</em>" in this category.</p>
+    {/if}
+</main>
 
 <style>
-    header {
-        margin-bottom: 4rem;
-    }
-    h4,
-    h2 {
-        text-align: center;
+    .hero {
+        max-width: 780px;
+        margin: 0 auto;
+        padding: 3rem 1.5rem 2rem;
+        border-bottom: 0.5px solid #e2e4e9;
         font-family: 'Inter', sans-serif;
     }
+
+    .stats {
+        display: flex;
+        gap: 1.5rem;
+        font-size: 0.8rem;
+        color: #7a8090;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .stats strong {
+        font-weight: 600;
+        color: #0d0f14;
+    }
+
+    /* ── Tabs ── */
     .tabs {
+        max-width: 780px;
+        margin: 0 auto;
+        padding: 0.9rem 1.5rem 0;
         display: flex;
         flex-wrap: wrap;
-        gap: 0.5rem;
-        margin-bottom: 1rem;
-    }
-
-    button {
-        padding: 0.55rem 0.9rem;
-        border-radius: 10px;
-        border: 1px solid #333;
-        background: #fff;
+        gap: 6px;
+        border-bottom: 0.5px solid #e2e4e9;
         font-family: 'Inter', sans-serif;
+    }
+
+    .tabs button {
+        padding: 5px 13px;
+        border-radius: 100px;
+        font-size: 0.8rem;
+        font-weight: 400;
         cursor: pointer;
+        border: 0.5px solid transparent;
+        color: #565d6b;
+        background: transparent;
+        transition:
+            background 0.13s,
+            color 0.13s;
+        font-family: 'Inter', sans-serif;
+        margin-bottom: 0.6rem;
     }
 
-    button:hover {
-        background-color: #f1f5f9;
-        opacity: 0.5;
+    .tabs button:hover {
+        background: #f1f3f6;
+        color: #0d0f14;
     }
 
-    button.selected {
-        background-color: #f1f5f9;
+    .tabs button.active {
+        background: #0d0f14;
+        color: #fff;
+        border-color: #0d0f14;
+        font-weight: 500;
+    }
+
+    /* ── Section ── */
+    .section {
+        max-width: 780px;
+        margin: 0 auto;
+        padding: 1.75rem 1.5rem 2rem;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .section-header {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        margin-bottom: 1.1rem;
+    }
+
+    h2 {
+        font-size: 1rem;
         font-weight: 600;
+        color: #0d0f14;
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .count {
+        font-size: 0.8rem;
+        color: #aab0bb;
     }
 
     .grid {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-        gap: 1rem;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 12px;
     }
 
-    section {
-        margin-bottom: 2rem;
+    .empty {
+        font-size: 0.875rem;
+        color: #7a8090;
+        padding: 2rem 0;
         font-family: 'Inter', sans-serif;
     }
 </style>
