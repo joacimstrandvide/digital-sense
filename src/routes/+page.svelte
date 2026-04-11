@@ -19,8 +19,7 @@
 <header class="hero">
     <!-- Kategorier -->
     <div class="stats">
-        <span><strong>{totalTools}</strong> tools</span>
-        <span><strong>{toolSections.length}</strong> categories</span>
+        <span>There are currently <strong>{totalTools}</strong> tools and <strong>{toolSections.length}</strong> categories available</span>
     </div>
 </header>
 
@@ -82,7 +81,6 @@
         color: #0d0f14;
     }
 
-    /* ── Tabs ── */
     .tabs {
         max-width: 780px;
         margin: 0 auto;
@@ -122,7 +120,6 @@
         font-weight: 500;
     }
 
-    /* ── Section ── */
     .section {
         max-width: 780px;
         margin: 0 auto;

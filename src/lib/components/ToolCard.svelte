@@ -2,25 +2,10 @@
     export let name
     export let description
     export let url
-    export let badges = []
     export let platforms = []
 </script>
 
 <article class="card">
-    <div class="card-top">
-        {#if badges.length > 0}
-            <div class="badges">
-                {#each badges as badge}
-                    <span
-                        class="badge"
-                        data-type={badge.toLowerCase().replace(/[\s/]+/g, '-')}
-                        >{badge}</span
-                    >
-                {/each}
-            </div>
-        {/if}
-    </div>
-
     <h3>{name}</h3>
     <p class="description">{description}</p>
 
@@ -34,21 +19,6 @@
 
     <a href={url} target="_blank" rel="noopener noreferrer" class="link">
         Visit website
-        <svg
-            width="11"
-            height="11"
-            viewBox="0 0 12 12"
-            fill="none"
-            aria-hidden="true"
-        >
-            <path
-                d="M2.5 9.5L9.5 2.5M9.5 2.5H4.5M9.5 2.5V7.5"
-                stroke="currentColor"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-            />
-        </svg>
     </a>
 </article>
 
@@ -69,70 +39,6 @@
     .card:hover {
         border-color: #c4c7d0;
         box-shadow: 0 2px 14px rgba(0, 0, 0, 0.07);
-    }
-    .card-top {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        gap: 8px;
-        margin-bottom: 0.1rem;
-    }
-
-    .badges {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 4px;
-        justify-content: flex-end;
-    }
-
-    .badge {
-        font-size: 10px;
-        font-weight: 600;
-        padding: 2px 8px;
-        border-radius: 100px;
-        letter-spacing: 0.02em;
-        white-space: nowrap;
-        background: #f1f3f6;
-        color: #555;
-    }
-
-    .badge[data-type='foss'],
-    .badge[data-type='open-source'] {
-        background: #e1f5ee;
-        color: #0f6e56;
-    }
-
-    .badge[data-type='no-account'],
-    .badge[data-type='no-cloud'],
-    .badge[data-type='no-tracking'],
-    .badge[data-type='no-email-needed'],
-    .badge[data-type='no-phone-number'],
-    .badge[data-type='no-telemetry'] {
-        background: #e6f1fb;
-        color: #185fa5;
-    }
-
-    .badge[data-type='e2e-encrypted'],
-    .badge[data-type='audited'],
-    .badge[data-type='anonymous'] {
-        background: #eeedfe;
-        color: #534ab7;
-    }
-
-    .badge[data-type='offline'],
-    .badge[data-type='local-storage'] {
-        background: #eaf3de;
-        color: #3b6d11;
-    }
-
-    .badge[data-type='experimental'] {
-        background: #faeeda;
-        color: #854f0b;
-    }
-
-    .badge[data-type='blocks-ads'] {
-        background: #fcebeb;
-        color: #a32d2d;
     }
 
     h3 {
